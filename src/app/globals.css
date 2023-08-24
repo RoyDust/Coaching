@@ -4,8 +4,11 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 213, 213, 213;
   --background-end-rgb: 255, 255, 255;
+  --main-color: 1, 119, 169;
+  --text-main-color: 153, 153, 153;
+  --text-color: 204, 204, 204;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +19,37 @@
   }
 }
 
+@layer base {
+  a,
+  input,
+  button,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .hover-animation {
+    @apply transition-colors duration-200;
+  }
+
+  .custom-button {
+    @apply hover-animation rounded-xl p-1 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .nav-item {
+    @apply text-slate-500 h-full   flex items-center;
+  }
+  .nav-item-active {
+    @apply font-semibold border-b-4 border-[#0177A9];
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+    Hiragino Sans GB, Microsoft YaHei, Arial !important;
 }
