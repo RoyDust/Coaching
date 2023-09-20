@@ -6,6 +6,8 @@ import { Nav } from "./_components/nav";
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
 import theme from "@/lib/themeConfig";
 import { ConfigProvider } from "antd";
+import { Footer } from "./_components/footer";
+import { CarouselCpt } from "./_components/carousel";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,8 +22,18 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         {/* ant-design 组件引入 */}
         <ConfigProvider theme={theme}>
           <StyledComponentsRegistry>
-            <Nav />
-            <Providers>{children}</Providers>
+            <Providers>
+              <header>
+                <Nav />
+              </header>
+              <div className=" w-full">
+                <CarouselCpt />
+              </div>
+              <main className=" min-h-[18rem] px-48">{children}</main>
+              <footer>
+                <Footer />
+              </footer>
+            </Providers>
           </StyledComponentsRegistry>
         </ConfigProvider>
       </body>
