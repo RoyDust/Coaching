@@ -26,10 +26,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
               <header>
                 <Nav />
               </header>
-              <div className=" w-full">
-                <CarouselCpt />
-              </div>
-              <main className=" min-h-[18rem] px-48">{children}</main>
+              <main className=" min-h-[18rem]">{children}</main>
               <footer>
                 <Footer />
               </footer>

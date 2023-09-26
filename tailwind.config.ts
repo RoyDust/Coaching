@@ -20,6 +20,7 @@ const config: Config = {
         "gray-light": "#d3dce6",
         black: "#0a0a0a",
         grey: "#999999",
+        subtext_grey: "#666666",
         light_gray: "#a3a3a3",
         special: "#FF9156",
       },

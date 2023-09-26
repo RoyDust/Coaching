@@ -16,23 +16,23 @@ export const Card = (props: CardProps) => {
   return (
     <div
       className={cn(
-        " w-48 bg-white flex-col flex justify-center",
+        " w-48 bg-white flex-col flex justify-center rounded-xl",
         props.className ?? props.className
       )}
     >
       <NextImage
         useSkeleton
-        className=" relative w-full  h-48"
-        imgClassName="object-cover transition "
+        className=" rounded-s-lg relative w-full h-48"
+        imgClassName="object-cover transition rounded-t-lg"
         src={cardData.img}
         alt={"在线一对一辅导"}
         fill
       />
-      <div className=" w-full text-xs p-2 pb-0 text-black gap-2 flex flex-col">
+      <div className=" flex flex-col w-full gap-2 p-2 pb-0 text-xs text-black">
         <h2>{cardData.courseTitle}</h2>
-        <p className="truncate text-grey">{cardData.courseIntroduction}</p>
+        <p className="text-grey truncate">{cardData.courseIntroduction}</p>
       </div>
-      <Button className=" border m-2 rounded-sm text-sm text-special">
+      <Button className=" text-special m-2 text-sm border rounded-sm">
         了解课程
       </Button>
     </div>
