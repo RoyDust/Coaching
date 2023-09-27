@@ -138,13 +138,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="w-full gap-4 my-4">
             <h2 className=" mb-4 text-xl text-black">
               {courseDataList[0].title}
             </h2>
-            <div className=" flex gap-6">
-              {courseDataList[0].list.slice(0, 7).map((item, index) => (
-                <Card key={index} data={item} />
+            <div className=" scroll-smooth flex justify-around w-full gap-6">
+              {courseDataList[0].list.slice(0, 4).map((item, index) => (
+                <Card
+                  key={index}
+                  img={item.img}
+                  title={item.courseTitle}
+                  introduction={item.courseIntroduction}
+                  className=" w-[12rem]"
+                />
               ))}
             </div>
           </div>

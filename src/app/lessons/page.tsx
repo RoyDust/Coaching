@@ -5,9 +5,10 @@ import Tags from "../_components/tags";
 import lessonData from "@/data/lessonData";
 import { Card } from "../_components/card";
 import { Pagination } from "antd";
+import { NewsList } from "../_components/newsList";
 
 const Lesson = () => {
-  const list = (lessonData as []).slice(0, 12);
+  const list: any[] = (lessonData as []).slice(0, 12);
   const tagsData = {
     switch: [
       {
@@ -48,11 +49,26 @@ const Lesson = () => {
           <div className="gap-7 grid grid-cols-4 p-6">
             {list.map((item, index) => (
               <div key={index}>
-                <Card data={item} className=" w-56" />
+                <Card
+                  // data={item}
+                  img={item.img}
+                  title={item.courseTitle}
+                  introduction={item.courseIntroduction}
+                  className=" w-56"
+                />
               </div>
             ))}
           </div>
           <Pagination className="" defaultCurrent={1} total={50} />
+        </div>
+
+        <div className="flex justify-center w-full gap-8 my-10">
+          <div className="flex flex-col flex-1">
+            <NewsList />
+          </div>
+          <div className="flex flex-col flex-1">
+            <NewsList />
+          </div>
         </div>
       </div>
     </div>
