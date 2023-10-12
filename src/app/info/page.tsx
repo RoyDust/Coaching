@@ -1,6 +1,10 @@
 import React from "react";
 
 const page = () => {
-  return <div>collection</div>;
+  return (
+    <div className="">
+      <div className=" bg-pink">collection</div>
+    </div>
+  );
 };
 export default page;
