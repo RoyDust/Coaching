@@ -2,9 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import cn from "clsx";
-import Button from "@/app/_ui/button";
+import Button from "@/ui/button";
 import { usePathname } from "next/navigation";
-import { NextImage } from "../../_ui/image";
+import { NextImage } from "../../ui/image";
 import Link from "next/link";
 
 export const Nav = () => {

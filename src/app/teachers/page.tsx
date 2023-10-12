@@ -2,7 +2,7 @@
 import React from "react";
 import cn from "clsx";
 import { useState } from "react";
-import { Card } from "../_components/card/index";
+import { Card } from "../../components/card/index";
 import data from "@/data/teachersData";
 import { Pagination } from "antd";
 

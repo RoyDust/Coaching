@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import cn from "clsx";
-import { NextImage } from "../../_ui/image";
-import Button from "../../_ui/button";
+import { NextImage } from "../../ui/image";
+import Button from "../../ui/button";
 
 interface CardProps {
   className?: string;

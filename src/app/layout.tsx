@@ -2,12 +2,12 @@ import Providers from "@/utils/provider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Nav } from "./_components/nav";
+import { Nav } from "../components/nav";
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
 import theme from "@/lib/themeConfig";
 import { ConfigProvider } from "antd";
-import { Footer } from "./_components/footer";
-import { CarouselCpt } from "./_components/carousel";
+import { Footer } from "../components/footer";
+import { CarouselCpt } from "../components/carousel";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

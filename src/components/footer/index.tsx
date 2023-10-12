@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { NextImage } from "../../_ui/image";
+import { NextImage } from "../../ui/image";
 
 export const Footer = () => {
   return (

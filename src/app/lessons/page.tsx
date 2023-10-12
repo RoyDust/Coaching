@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { NextImage } from "../_ui/image";
-import Tags from "../_components/tags";
+import { NextImage } from "../../ui/image";
+import Tags from "../../components/tags";
 import lessonData from "@/data/lessonData";
-import { Card } from "../_components/card";
+import { Card } from "../../components/card";
 import { Pagination } from "antd";
-import { NewsList } from "../_components/newsList";
+import { NewsList } from "../../components/newsList";
 
 const Lesson = () => {
   const list: any[] = (lessonData as []).slice(0, 12);

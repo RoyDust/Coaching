@@ -1,15 +1,15 @@
 "use client";
 import { useAllUserInfo } from "@/query/user";
-import { NextImage } from "./_ui/image";
+import { NextImage } from "../ui/image";
 import { Tabs, TabsProps } from "antd";
-import Tags from "./_components/tags";
+import Tags from "../components/tags";
 import { useState } from "react";
 import answerData from "@/data/homeText.json";
 import courseData from "@/data/courseData";
-import { Card } from "./_components/card";
-import { CarouselCpt } from "./_components/carousel";
-import { Links } from "./_components/links";
-import { NewsList } from "./_components/newsList";
+import { Card } from "../components/card";
+import { CarouselCpt } from "../components/carousel";
+import { Links } from "../components/links";
+import { NewsList } from "../components/newsList";
 
 export default function Home() {
   const allUser = useAllUserInfo();
